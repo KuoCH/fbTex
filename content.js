@@ -47,7 +47,7 @@ function parsePosts() {
 
 
 function findList(){
-  console.log("in findList");
+  //console.log("in findList");
   var list = document.getElementById("webMessengerRecentMessages");
   if(list){
     var childNodes = list.getElementsByTagName('p');
@@ -57,14 +57,14 @@ function findList(){
           if (elm && !elm.doneTag){
             elm.doneTag = 'done';
             MathJax.Hub.Typeset(elm);
-            console.log(elm);
+            //console.log(elm);
           }else{
           }
       }
-      console.log("in findNewMsg2");
+      //console.log("in findNewMsg2");
       return;
     }else{
-      console.log("in findNewMsg3");
+      //console.log("in findNewMsg3");
       return;
     }
   }
@@ -85,9 +85,9 @@ setInterval(function() {
     var script = document.createElement("script");
     script.text = findList.toString() + ";findList();";
     document.body.appendChild(script);
-    console.log("have list");
+    //console.log("have list");
   }else{
-    console.log("no list");
+    //console.log("no list");
   }
 }, 500);
 
