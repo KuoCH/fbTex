@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "name": "Hack Facebook",
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "icons": {
+    "16": "transparent.png"
+  }
+}
