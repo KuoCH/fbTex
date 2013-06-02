@@ -17,7 +17,7 @@ function parsePosts() {
   for (var i = 0, l = posts.length; i < l; ++i) {
     var post = posts[i];
     if (!post.is_modified) {
-      console.log('want to modify: ', post);
+      //console.log('want to modify: ', post);
       MathJax.Hub.Typeset(post);
       post.is_modified = true;
     }
@@ -37,13 +37,39 @@ function parsePosts() {
   for (var i = 0, l = comments.length; i < l; ++i) {
     var comment = comments[i];
     if (!comment.is_modified) {
-      console.log('want to modify: ', comment);
+  //    console.log('want to modify: ', comment);
       MathJax.Hub.Typeset(comment);
       comment.is_modified = true;
     }
   }
 
 }
+
+
+function findList(){
+  console.log("in findList");
+  var list = document.getElementById("webMessengerRecentMessages");
+  if(list){
+    var childNodes = list.getElementsByTagName('p');
+    if(childNodes){
+      for(i=0 ; i<childNodes.length ; i++){
+        var elm = childNodes[i]
+          if (elm && !elm.doneTag){
+            elm.doneTag = 'done';
+            MathJax.Hub.Typeset(elm);
+            console.log(elm);
+          }else{
+          }
+      }
+      console.log("in findNewMsg2");
+      return;
+    }else{
+      console.log("in findNewMsg3");
+      return;
+    }
+  }
+}
+
 
 setInterval(function() {
 
@@ -54,5 +80,14 @@ setInterval(function() {
     document.body.appendChild(script);
   }
 
+  var list = document.getElementById("webMessengerRecentMessages");
+  if(list){
+    var script = document.createElement("script");
+    script.text = findList.toString() + ";findList();";
+    document.body.appendChild(script);
+    console.log("have list");
+  }else{
+    console.log("no list");
+  }
 }, 500);
 
