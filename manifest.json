@@ -13,7 +13,9 @@
   }
   ],
   "web_accessible_resources": [
-    "MathJax/*"
+    "MathJax/*",
+    "insert.js",
+    "config.js"
   ],
   /*
  "content_security_policy": 
@@ -26,11 +28,10 @@
     ],
     "accepts_tls_channel_id": false
   },
-  */
   "permissions": [
     "activeTab",
-    "*://*/"
   ],
+  */
 
   "icons": {
     "128": "logo.png"

@@ -1,0 +1,5 @@
+$\det\left |\begin{array}{cccc}b_{11} & b_{12} & \cdots & b_{1m} \\b_{21} & b_{22} & \cdots & b_{2m} \\\vdots & \vdots & \ddots & \vdots \\b_{n1} & b_{n2} & \cdots & b_{nm} \\\end{array}\right | = 0$
+$\frac{1}{a^b+3}$
+$a_aaa$
+$a_{aaa}$
+$j^{1999}$
