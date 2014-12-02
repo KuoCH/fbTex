@@ -1,4 +1,4 @@
-console.log('content.js');
+//console.log('content.js');
 
 var configScript = document.createElement('script');
 configScript.type = 'text/javascript';
